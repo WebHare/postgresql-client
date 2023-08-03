@@ -62,11 +62,7 @@ export const TimestampType: DataType = {
   },
 
   isType(v: any): boolean {
-    return (
-      v instanceof Date &&
-      !(v.getFullYear() === 1970 && v.getMonth() === 0 && v.getDate() === 1) &&
-      !(v.getHours() === 0 && v.getMinutes() === 0 && v.getSeconds() === 0 && v.getMilliseconds() === 0)
-    );
+    return v instanceof Date;
   },
 };
 
